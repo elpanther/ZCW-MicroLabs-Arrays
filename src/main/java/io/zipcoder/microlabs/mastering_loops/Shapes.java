@@ -35,11 +35,11 @@ public class Shapes {
 
     public String tableSquares(int n){
         String output = "###Example\ntableSquares(6)\n*** Output ***\nA 6 x 6 table square";
-        int increase = 6;
-        for (int l =1; l <=increase; l++){
+        //int increase = 6;
+        for (int l =1; l <=n; l++){
             int newNum = 0;
             output += "\n";
-            for (int cnt =0; cnt < increase; cnt++){
+            for (int cnt =0; cnt < n; cnt++){
                 newNum = newNum + l;
                 output +=  "|" + newNum ;
             }
