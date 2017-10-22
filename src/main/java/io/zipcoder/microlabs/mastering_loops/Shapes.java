@@ -13,37 +13,45 @@ public class Shapes {
                           }
             output += "\n" + star;
         }
-
         return output;
     }
 
     public String tableSquare(){
-        String output = "tableSquare()\n*** Output ***";
+        String output = "###Example\ntableSquare()\n*** Output ***\nA 4 x 4 table square";
         for (int l =1; l <5; l++){
             int newNum = 0;
                 output += "\n";
                 for (int cnt =0; cnt < 4; cnt++){
                     newNum = newNum + l;
-                    output +=  "|" + newNum ;
+                    if( cnt < 1 ) { // create rows
+                        output +=  "| " + newNum ;
+                    } else if( newNum <10) {
+                        output +=  " |  " + newNum ;
+                    } else {
+                        output +=  " | " + newNum ;
+                    }
             }
-            output +=  "|";
-
+            output +=  " |";
         }
-
         return output;
     }
 
     public String tableSquares(int n){
         String output = "###Example\ntableSquares(6)\n*** Output ***\nA 6 x 6 table square";
-        //int increase = 6;
-        for (int l =1; l <=n; l++){
+       for (int l =1; l <=n; l++){
             int newNum = 0;
             output += "\n";
-            for (int cnt =0; cnt < n; cnt++){
+            for (int cnt =0; cnt < n; cnt++){ //create columns
                 newNum = newNum + l;
-                output +=  "|" + newNum ;
+                if( cnt < 1 ) { // create rows
+                    output +=  "| " + newNum ;
+                } else if( newNum <10) {
+                    output +=  " |  " + newNum ;
+                } else {
+                    output +=  " | " + newNum ;
+                }
             }
-            output +=  "|";
+            output +=  " |";
         }
         return output;
     }
