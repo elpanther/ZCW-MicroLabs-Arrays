@@ -35,8 +35,8 @@ public class Numbers {
     }
 
     public String even(int n){
-        String output = "*** Output ***\neven()";
-        for (int x=1; x<=19; x++){
+        String output = "*** Output ***\neven(20)";
+        for (int x=1; x<n; x++){
             if(x % 2 ==0){
                 output +="\n" +x;
             }
@@ -47,8 +47,8 @@ public class Numbers {
 
 
     public String powers(int n){
-        String output = "*** Output ***\npowers()";
-               for(int i=2; i<9; i++){
+        String output = "*** Output ***\npowers(8)";
+               for(int i=1; i<=n; i++){
             double x = Math.pow(2,i);
             output +="\n" + Math.round(x);
         }

@@ -39,19 +39,15 @@ public class Shapes {
     public String tableSquares(int n){
         String output = "###Example\ntableSquares(6)\n*** Output ***\nA 6 x 6 table square";
        for (int l =1; l <=n; l++){
-            int newNum = 0;
-            output += "\n";
-            for (int cnt =0; cnt < n; cnt++){ //create columns
-                newNum = newNum + l;
-                if( cnt < 1 ) { // create rows
-                    output +=  "| " + newNum ;
-                } else if( newNum <10) {
-                    output +=  " |  " + newNum ;
-                } else {
-                    output +=  " | " + newNum ;
+           output += "\n";
+            for (int cnt =1; cnt <= n; cnt++){ //create columns
+                if( cnt <= 1 ) { // build row
+                    output += String.format("|%2d " , l * cnt);
+                  } else {
+                    output += String.format("| %2d ", l * cnt);
                 }
             }
-            output +=  " |";
+            output +=  "|";
         }
         return output;
     }
