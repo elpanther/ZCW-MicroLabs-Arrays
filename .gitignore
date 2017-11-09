@@ -145,3 +145,10 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+<<<<<<< HEAD
+=======
+
+.project
+.classpath
+.settings
+>>>>>>> 83d1b8803cf6b6e411003110efb9f990e12c0ce9

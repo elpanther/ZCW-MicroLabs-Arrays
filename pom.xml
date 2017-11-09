@@ -4,8 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
     <groupId>io.zipcoder.microlabs</groupId>
     <artifactId>arrays</artifactId>
+=======
+    <groupId>io.zipcoder</groupId>
+    <artifactId>MicroLabs-Loops</artifactId>
+>>>>>>> 83d1b8803cf6b6e411003110efb9f990e12c0ce9
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -17,4 +22,8 @@
         </dependency>
 
     </dependencies>
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> 83d1b8803cf6b6e411003110efb9f990e12c0ce9
