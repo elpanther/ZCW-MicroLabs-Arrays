@@ -46,7 +46,7 @@ public class ArrayPartyTest {
         String expected = "Tomatoes";
 
         //: When
-        String actual = lastButOneTest.lastButOneTest(breakfast);
+        String actual = lastButOneTest.lastButOne(breakfast);
 
         //: Then
         Assert.assertEquals("The two string outputs are equal", expected, actual);
@@ -69,7 +69,7 @@ public class ArrayPartyTest {
              "Sausage";
 
     //: When
-    String actual = reverseTest.reverseTest(breakfast);
+    String actual = reverseTest.reverse(breakfast);
 
     //: Then
         Assert.assertEquals("The two string outputs are equal",expected,actual);
@@ -80,16 +80,18 @@ public class ArrayPartyTest {
     @Test
     public void isPalindromeTest() {
         //: Given
-        String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
-        ArrayParty isPalindromeTest = new ArrayParty();
-        String expected = "*** Output ***\n" +
-                "Mushrooms, Tomatoes, Bacon, Beans, Eggs, Sausage";
+        String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
+        String [] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty arrayParty = new ArrayParty();
+
 
         //: When
-        String actual = isPalindromeTest.isPalindromeTest(breakfast);
+        String expected = "True\nFalse";
+        String actual = arrayParty.isPalindrome(palindromic)+"\n"+arrayParty.isPalindrome(breakfast);
+
 
         //: Then
-        Assert.assertEquals("The two string outputs are equal", expected, actual);
+        Assert.assertEquals(expected, actual);
     }
 
 
@@ -100,10 +102,10 @@ public class ArrayPartyTest {
     public void compressTest() {
         int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
         ArrayParty compressTest = new ArrayParty();
-        String expected = 1 + "\n" + 2 +"\n" + 3 + "\n" + 4;
+        String expected = "compress(nums)\n*** Output ***\n" + 1 + "\n" + 3 + "\n" + 2 + "\n" + 1  + "\n" +  4;
         //System.out.println(nums);
 
-        String actual = compressTest.compressTest(nums);
+        String actual = compressTest.compress(nums);
 
         Assert.assertEquals("The two string outputs are equal", expected, actual);
     }
@@ -111,6 +113,17 @@ public class ArrayPartyTest {
 
 
     //TODO Define the method packTest
+    @Test
+    public void packTest() {
+        char [] letters = {'a','a','a','a','b','c','c','a','a','d','e','e','e','e'};
+        ArrayParty lettersTest = new ArrayParty();
+        String expected = "pack(nums)\n*** Output ***\n: aaaa, b, cc, aa, d, eeee";
+        //System.out.println(nums);
+
+        String actual = lettersTest.pack(letters);
+
+        Assert.assertEquals("The two string outputs are equal", expected, actual);
+    }
 
 
 }
